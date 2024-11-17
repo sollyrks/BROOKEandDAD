@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/backgrounds/milky-way.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+#starCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.message-box {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    display: none;
+    z-index: 2;
+    animation: fadeIn 0.5s;
+}
+
+.date-picker {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.shooting-star {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: white;
+    pointer-events: none;
+    z-index: 3;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.constellation-name {
+    position: fixed;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+#musicControl {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Add more styles */

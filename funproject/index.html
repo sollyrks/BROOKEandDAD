@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Stars ✨</title>
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background"></div>
+    <canvas id="starCanvas"></canvas>
+    
+    <div class="date-picker">
+        <input type="date" id="datePicker" onchange="updateStarMap()">
+    </div>
+
+    <div id="musicControl" onclick="toggleMusic()">🎵</div>
+
+    <div class="message-box" id="messageBox"></div>
+
+    <div class="controls">
+        <button onclick="showConstellation('heart')">Our Heart ❤️</button>
+        <button onclick="showConstellation('firstDate')">First Date 🌟</button>
+        <button onclick="showConstellation('future')">Our Future ✨</button>
+        <button onclick="createShootingStar()">Make a Wish 🌠</button>
+    </div>
+
+    <script src="js/stars.js"></script>
+    <script src="js/constellations.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
